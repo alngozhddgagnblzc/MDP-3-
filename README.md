@@ -1,5 +1,6 @@
-![mdp깃허브냉장고](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/3f18cb8d-12cd-4848-8152-d89de691b5fd)
-
+<div align="center">
+  ![mdp깃허브냉장고](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/3f18cb8d-12cd-4848-8152-d89de691b5fd)
+</div>
 # 🖥️ MDP 프로젝트 3조
 2024년도 인천전자마이스터고 인공지능전자과 3-1 MDP 3조 신승철, 최홍석, 송정민, 정진원
 
