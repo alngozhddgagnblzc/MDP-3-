@@ -1,4 +1,3 @@
-
   ![mdp깃허브냉장고](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/3f18cb8d-12cd-4848-8152-d89de691b5fd)
 ---------
 # 🖥️ MDP 프로젝트 3조
