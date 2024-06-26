@@ -1,3 +1,5 @@
+https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/e453f4f8-4eb9-47b9-890a-2d38e352d09a
+
 # 🖥️ MDP 프로젝트 3조
 2024년도 인천전자마이스터고 인공지능전자과 3-1 MDP 3조 신승철, 최홍석, 송정민, 정진원
 
