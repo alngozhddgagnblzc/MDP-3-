@@ -9,4 +9,4 @@
 + 작동 구성
   + 작성중...
 + 사용 기술
-  +<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white">
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white">
