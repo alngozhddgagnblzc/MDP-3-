@@ -8,3 +8,5 @@
 + 나의 냉장고 안에 식재료를 파악해 앱으로 간단하게 알려주고, 인공지능을 이용해 현재 가지고있는 식재료를 기반으로 레시피를 추천해주는 기능
 + 작동 구성
   + 작성중...
++ 사용 기술
+  +<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=Android&logoColor=white">
