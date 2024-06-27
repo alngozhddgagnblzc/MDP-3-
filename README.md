@@ -1,5 +1,5 @@
   <p align="center">
-  <img src="https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/1045ba43-49e6-4e26-ac00-63d1e515c39f)">
+  <img src="https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/11d10aac-5ec5-461d-95e6-363b5586f0c0">
 </p>
 
 # 🖥️ MDP 프로젝트 3조
