@@ -30,6 +30,16 @@
 |Raspberry-Pi|데이터베이스의 웹서버 호스팅|
 |STM32|센서와 디스플레이 구현|
 
+| 기술          | 설명                                            |
+|:-------------:|:----------------------------------------------:|
+| Kotlin        | 안드로이드 스튜디오에서 사용하는 언어            |
+| Android Studio| 앱 개발을 위한 프로그램                         |
+| Python        | 인공지능 모델 학습, 인공지능 레시피 추천 기능 구현|
+| Flask         | 데이터베이스를 웹서버로 구축                    |
+| MariaDB       | 데이터베이스 구현                              |
+| Raspberry-Pi  | 데이터베이스의 웹서버 호스팅                     |
+| STM32         | 센서와 디스플레이 구현                         |
+
 
 ## 📱 구성도
 ![캡asdsad처](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/71cf6bfc-75cf-408e-8c17-efd5a34c3a7f)
