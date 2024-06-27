@@ -1,7 +1,7 @@
   <p align="center">
   <img src="https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/3f18cb8d-12cd-4848-8152-d89de691b5fd)">
 </p>
--------------------
+
 # 🖥️ MDP 프로젝트 3조
 **2024년도 인천전자마이스터고 인공지능전자과 3-1 MDP 3조**
 |조원|역할|
