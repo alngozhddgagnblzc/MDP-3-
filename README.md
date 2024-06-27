@@ -7,10 +7,10 @@
 
 |조원|역할|
 |------|---|
-|<span style="color:red"> Android </span>|인공지능, 안드로이드 기능|
-|<span style="color:red"> Android </span>|하드웨어, 데이터베이스 웹서버|
-|<span style="color:red"> Android </span>|안드로이드 기능, 디자인|
-|<span style="color:red"> Android </span>|디스플레이, 마이크로프로세서 기능|
+|dasd|인공지능, 안드로이드 기능|
+|asd|하드웨어, 데이터베이스 웹서버|
+|asd|안드로이드 기능, 디자인|
+|ddsdsd|디스플레이, 마이크로프로세서 기능|
 
 ## ⚙️ 우리의 작품
 + ### **스마트 냉장고 (Smart Refrigerator)**
