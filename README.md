@@ -7,7 +7,7 @@
 
 |조원|역할|
 |------|---|
-|최홍석|인공지능, 안드로이드 기능|
+|<span style="background-color:#F5F5F5"> 회색형광펜 </span>|인공지능, 안드로이드 기능|
 |송정민|하드웨어, 데이터베이스 웹서버|
 |신승철|안드로이드 기능, 디자인|
 |정진원|디스플레이, 마이크로프로세서 기능|
@@ -16,10 +16,15 @@
 + ### **스마트 냉장고 (Smart Refrigerator)**
 + 나의 냉장고 안에 식재료를 파악해 앱으로 간단하게 알려주고, 인공지능을 이용해 현재 가지고있는 식재료를 기반으로 레시피를 추천해주는 기능을 가진 냉장고와 앱
 
-+ 사용 기술   
++ 주요 기술   
 <div align=center><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white"> <img src="https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"> <img src="https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"></div>
 
-+ 기술별 사용용도
+|기술|설명|
+|------|---|
+|최홍석|인공지능, 안드로이드 기능|
+|송정민|하드웨어, 데이터베이스 웹서버|
+|신승철|안드로이드 기능, 디자인|
+|정진원|디스플레이, 마이크로프로세서 기능|
 
 
 ## 📱 구성도
