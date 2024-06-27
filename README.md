@@ -7,7 +7,7 @@
 
 |조원|역할|
 |------|---|
-|<span style="background-color:#F5F5F5"> Android </span>|인공지능, 안드로이드 기능|
+|<span style="background-color:#fff5b1"> Android </span>|인공지능, 안드로이드 기능|
 |송정민|하드웨어, 데이터베이스 웹서버|
 |신승철|안드로이드 기능, 디자인|
 |정진원|디스플레이, 마이크로프로세서 기능|
