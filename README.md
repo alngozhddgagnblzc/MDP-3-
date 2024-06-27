@@ -1,4 +1,4 @@
-  <p align="center">
+ <p align="center">
   <img src="https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/78a13680-a4cc-47b6-8337-b42a71e4eef2">
 </p>
 
