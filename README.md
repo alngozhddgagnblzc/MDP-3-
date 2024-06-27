@@ -5,12 +5,12 @@
 # 🖥️ MDP 프로젝트 3조
 **2024년도 인천전자마이스터고 인공지능전자과 3-1 MDP 3조**
 
-|조원|역할|
+|기술|설명|
 |------|---|
-|<span style="background-color: gray;">강조된 텍스트</span>|인공지능, 안드로이드 기능|
-|asd|하드웨어, 데이터베이스 웹서버|
-|asd|안드로이드 기능, 디자인|
-|ddsdsd|디스플레이, 마이크로프로세서 기능|
+|최홍석|인공지능, 안드로이드 기능|
+|송정민|하드웨어, 데이터베이스 웹서버|
+|신승철|안드로이드 기능, 디자인|
+|정진원|디스플레이, 마이크로프로세서 기능|
 
 ## ⚙️ 우리의 작품
 + ### **스마트 냉장고 (Smart Refrigerator)**
@@ -20,11 +20,9 @@
 <div align=center><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white"> <img src="https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"> <img src="https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"></div>
 
 |기술|설명|
-|------|---|
-|최홍석|인공지능, 안드로이드 기능|
-|송정민|하드웨어, 데이터베이스 웹서버|
-|신승철|안드로이드 기능, 디자인|
-|정진원|디스플레이, 마이크로프로세서 기능|
+|--------|--------|
+| <span style="background-color: gray;">강조된 텍스트</span> | 일반 텍스트 |
+| 일반 텍스트 | <span style="background-color: gray;">또 다른 강조된 텍스트</span> |
 
 
 ## 📱 구성도
