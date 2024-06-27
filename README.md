@@ -19,7 +19,7 @@
 + 주요 기술   
 <div align=center><img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white"> <img src="https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"> <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"> <img src="https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi"> <img src="https://img.shields.io/badge/stm32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white">
 </div>   
-   
+
 |기술|설명|
 |--------|--------|
 |Kotlin|안드로이드 스튜디오에서 사용하는 언어|
@@ -29,43 +29,6 @@
 |MariaDB|데이터베이스 구현|
 |Raspberry-Pi|데이터베이스의 웹서버 호스팅|
 |STM32|센서와 디스플레이 구현|
-
-# 프로젝트 기술 스택
-
-<table>
-  <tr>
-    <th style="text-align:center;">기술</th>
-    <th style="text-align:center;">설명</th>
-  </tr>
-  <tr>
-    <td style="text-align:center;">Kotlin</td>
-    <td style="text-align:center;">안드로이드 스튜디오에서 사용하는 언어</td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">Android Studio</td>
-    <td style="text-align:center;">앱 개발을 위한 프로그램</td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">Python</td>
-    <td style="text-align:center;">인공지능 모델 학습, 인공지능 레시피 추천 기능 구현</td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">Flask</td>
-    <td style="text-align:center;">데이터베이스를 웹서버로 구축</td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">MariaDB</td>
-    <td style="text-align:center;">데이터베이스 구현</td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">Raspberry-Pi</td>
-    <td style="text-align:center;">데이터베이스의 웹서버 호스팅</td>
-  </tr>
-  <tr>
-    <td style="text-align:center;">STM32</td>
-    <td style="text-align:center;">센서와 디스플레이 구현</td>
-  </tr>
-</table>
 
 
 ## 📱 구성도
