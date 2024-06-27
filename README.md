@@ -29,20 +29,7 @@
 |MariaDB|데이터베이스 구현|
 |Raspberry-Pi|데이터베이스의 웹서버 호스팅|
 |STM32|센서와 디스플레이 구현|
-<table>
-  <tr>
-    <th>헤더 1</th>
-    <th>헤더 2</th>
-  </tr>
-  <tr>
-    <td><span style="background-color: red;">강조된 텍스트</span></td>
-    <td>일반 텍스트</td>
-  </tr>
-  <tr>
-    <td>일반 텍스트</td>
-    <td><span style="background-color: lightgray;">또 다른 강조된 텍스트</span></td>
-  </tr>
-</table>
+
 
 
 ## 📱 구성도
