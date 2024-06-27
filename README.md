@@ -35,7 +35,7 @@
     <th>헤더 2</th>
   </tr>
   <tr>
-    <td><span style="background-color: lightgray;">강조된 텍스트</span></td>
+    <td><span style="background-color: red;">강조된 텍스트</span></td>
     <td>일반 텍스트</td>
   </tr>
   <tr>
