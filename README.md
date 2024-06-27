@@ -24,3 +24,6 @@
 
 ## 📱 구성도
 ![캡asdsad처](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/71cf6bfc-75cf-408e-8c17-efd5a34c3a7f)
+
+## 🎬 동작 영상
+(추가예정)
