@@ -30,10 +30,6 @@
 |Raspberry-Pi|데이터베이스의 웹서버 호스팅|
 |STM32|센서와 디스플레이 구현|
 
-| 헤더 1 | 헤더 2 |
-|--------|--------|
-| <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20"><rect width="100" height="20" fill="lightgray"/><text x="10" y="15" fill="black">강조된 텍스트</text></svg> | 일반 텍스트 |
-| 일반 텍스트 | <svg xmlns="http://www.w3.org/2000/svg" width="150" height="20"><rect width="150" height="20" fill="lightgray"/><text x="10" y="15" fill="black">또 다른 강조된 텍스트</text></svg> |
 
 
 ## 📱 구성도
