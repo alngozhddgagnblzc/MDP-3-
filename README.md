@@ -21,8 +21,11 @@
    
 |기술|설명|
 |--------|--------|
-| <span style="background-color: gray;">강조된 텍스트</span> | 일반 텍스트 |
-| 일반 텍스트 | <span style="background-color: gray;">또 다른 강조된 텍스트</span> |
+|Kotlin|안드로이드 스튜디오에서 사용하는 언어|
+|Android Studio|앱 개발을 위한 프로그램|
+||||
+||||
+||||
 
 
 ## 📱 구성도
