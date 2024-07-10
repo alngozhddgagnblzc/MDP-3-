@@ -36,6 +36,7 @@
 ![캡asdsad처](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/71cf6bfc-75cf-408e-8c17-efd5a34c3a7f)
 
 ## 📱 (테스트)
++ ### **라벨링(Labelling) 작업**
 ![GIFMaker_me (2)](https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/30c3bb5a-35e5-4552-91bc-e06df297793e)
 
 ## 🎬 동작 영상
