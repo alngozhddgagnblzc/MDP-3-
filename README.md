@@ -1,5 +1,5 @@
  <p align="center">
-  <img src="https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/78a13680-a4cc-47b6-8337-b42a71e4eef2">
+  <img src="https://github.com/alngozhddgagnblzc/MDP3-1_3team/assets/147483097/17781c70-8979-44e6-9e48-dddaea002d76">
 </p>
 <div align=center><img src="https://img.shields.io/badge/premier-360D3A?style=for-the-badge&logo=premierleague&logoColor=white"></div>  
 
