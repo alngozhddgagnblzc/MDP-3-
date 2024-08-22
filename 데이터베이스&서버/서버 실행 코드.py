@@ -1,7 +1,9 @@
+
+
 from flask import Flask, jsonify, Response, request, redirect, url_for
 import pymysql
 import json
-from AI import AI_on
+from AI import AI_on #인공지능 실행 함수 부분(파일명과 함수명이 일치해야 실행됨)
 import serial
 from serial_test import send_text, receive_text
 app = Flask(__name__)
