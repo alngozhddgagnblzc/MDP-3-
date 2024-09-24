@@ -1,0 +1,222 @@
+package com.example.test
+
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONException
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+class RecipeActivity : AppCompatActivity() {
+    private lateinit var recipeContainer: LinearLayout
+    private lateinit var imageView: ImageView
+    private lateinit var btnSendData: Button
+    private lateinit var btnViewRecipe: Button
+    private lateinit var requestQueue: RequestQueue
+
+    private var currentImageId: Int? = null
+    private var isSendButtonClicked = false
+    private val TAG = "RecipeActivity"
+
+    // ID와 한글 이름의 매핑
+    private val recipeNameMappings = mapOf(
+        "101" to "김치찌개",
+        "102" to "대파제육볶음",
+        "103" to "무조림",
+        "104" to "배추삼겹살",
+        "105" to "수육",
+        "106" to "김치볶음밥"
+    )
+
+    private val ingredientNameMappings = mapOf(
+        "201" to "고기",
+        "202" to "대파",
+        "203" to "양배추",
+        "204" to "고추",
+        "205" to "양파",
+        "206" to "무",
+        "207" to "김치",
+        "208" to "마늘",
+        "209" to "멸치",
+        "210" to "소세지",
+        "211" to "계란"
+    )
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_recipe)
+
+        recipeContainer = findViewById(R.id.recipeContainer)
+        imageView = findViewById(R.id.imageView)
+        btnSendData = findViewById(R.id.btnSendData)
+        btnViewRecipe = findViewById(R.id.btnViewRecipe)
+        val btnFetchRecipes: Button = findViewById(R.id.btnFetchRecipes)
+
+        requestQueue = Volley.newRequestQueue(this)
+
+        btnFetchRecipes.setOnClickListener {
+            fetchRecipes()
+        }
+
+        btnSendData.setOnClickListener {
+            currentImageId?.let {
+                sendDataToRaspberryPi(it)
+                isSendButtonClicked = true
+            }
+        }
+
+        btnViewRecipe.setOnClickListener {
+            if (isSendButtonClicked) {
+                val intent = Intent(this, RecipeExplanationActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "먼저 전송 버튼을 눌러주세요", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun fetchRecipes() {
+        RetrofitClient.instance.getRecipes().enqueue(object : Callback<RecipesResponse> {
+            override fun onResponse(call: Call<RecipesResponse>, response: retrofit2.Response<RecipesResponse>) {
+                if (response.isSuccessful) {
+                    Log.d(TAG, "레시피를 성공적으로 가져왔습니다.")
+                    response.body()?.matching_recipes?.let { recipes ->
+                        recipeContainer.removeAllViews()
+
+                        recipes.forEach { recipe ->
+                            // recipe_name을 한글 이름으로 매핑
+                            val recipeName = recipeNameMappings[recipe.recipe_name] ?: recipe.recipe_name
+
+                            // 각 재료 ID를 재료명으로 매핑
+                            val ingredients = recipe.ingredients.joinToString(", ") { ingredientNameMappings[it] ?: it }
+
+                            // 버튼을 동적으로 생성하여 레시피 정보 표시
+                            val recipeButton = Button(this@RecipeActivity).apply {
+                                text = "$recipeName\n재료: $ingredients"
+                                setOnClickListener {
+                                    Toast.makeText(this@RecipeActivity, "선택된 레시피: $recipeName", Toast.LENGTH_SHORT).show()
+                                    Log.d(TAG, "선택된 레시피: $recipeName")
+
+                                    // 로컬 리소스에서 이미지 로드
+                                    val imageResId = when (recipe.recipe_id) {
+                                        "101" -> R.drawable.kimchi_jjigae
+                                        "102" -> R.drawable.depa
+                                        "103" -> R.drawable.moo
+                                        "104" -> R.drawable.bechu
+                                        "105" -> R.drawable.su6
+                                        "106" -> R.drawable.kimchi_bokkeumbap
+                                        else -> null
+                                    }
+
+                                    if (imageResId != null) {
+                                        imageView.setImageResource(imageResId)
+                                        imageView.visibility = ImageView.VISIBLE
+                                        currentImageId = recipe.recipe_name.last().digitToInt()
+                                        Log.d(TAG, "현재 레시피 ID: $currentImageId")
+                                    } else {
+                                        imageView.setImageDrawable(null)
+                                        imageView.visibility = ImageView.GONE
+                                        currentImageId = null
+                                    }
+                                }
+                            }
+                            recipeContainer.addView(recipeButton)
+                        }
+                    }
+                } else {
+                    Log.e(TAG, "레시피 가져오기 오류: ${response.errorBody()?.string()}")
+                    Toast.makeText(this@RecipeActivity, "오류: ${response.errorBody()?.string()}", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<RecipesResponse>, t: Throwable) {
+                Log.e(TAG, "레시피 가져오기 실패: ${t.message}", t)
+                Toast.makeText(this@RecipeActivity, "레시피 가져오기 실패: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    private fun sendDataToRaspberryPi(value: Int) {
+        val url = "http://192.168.137.75:5000/send_data"
+        val jsonBody = JSONObject()
+        try {
+            jsonBody.put("value", value)
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+
+        Log.d(TAG, "라즈베리 파이에 데이터 전송: $jsonBody")
+
+        val stringRequest = object : StringRequest(Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                Log.d(TAG, "응답: $response")
+                Toast.makeText(this, "라즈베리 파이에 데이터 전송 성공", Toast.LENGTH_SHORT).show()
+            },
+            Response.ErrorListener { error ->
+                val statusCode = error.networkResponse?.statusCode
+                val errorBody = error.networkResponse?.data?.let { String(it) } ?: "오류 본문 없음"
+                val errorMessage = error.message ?: "알 수 없는 오류"
+                Log.e(TAG, "오류: $errorMessage, 상태 코드: $statusCode, 본문: $errorBody")
+                Toast.makeText(this, "라즈베리 파이에 데이터 전송 실패", Toast.LENGTH_SHORT).show()
+            }) {
+            override fun getBody(): ByteArray {
+                return jsonBody.toString().toByteArray()
+            }
+
+            override fun getBodyContentType(): String {
+                return "application/json; charset=utf-8"
+            }
+        }
+
+        requestQueue.add(stringRequest)
+    }
+
+    private fun sendDataToSTM32(recipeId: String) {
+        val url = "http://192.168.137.75:5000/send_recipe_id" // STM32로 전송할 URL
+        val jsonBody = JSONObject()
+        try {
+            jsonBody.put("recipe_id", recipeId) // 레시피 ID 전송
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+
+        Log.d(TAG, "STM32로 데이터 전송: $jsonBody")
+
+        val stringRequest = object : StringRequest(Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                Log.d(TAG, "응답: $response")
+                Toast.makeText(this, "STM32로 데이터 전송 성공", Toast.LENGTH_SHORT).show()
+            },
+            Response.ErrorListener { error ->
+                val statusCode = error.networkResponse?.statusCode
+                val errorBody = error.networkResponse?.data?.let { String(it) } ?: "오류 본문 없음"
+                val errorMessage = error.message ?: "알 수 없는 오류"
+                Log.e(TAG, "오류: $errorMessage, 상태 코드: $statusCode, 본문: $errorBody")
+                Toast.makeText(this, "STM32로 데이터 전송 실패", Toast.LENGTH_SHORT).show()
+            }) {
+            override fun getBody(): ByteArray {
+                return jsonBody.toString().toByteArray()
+            }
+
+            override fun getBodyContentType(): String {
+                return "application/json; charset=utf-8"
+            }
+        }
+
+        requestQueue.add(stringRequest)
+    }
+}
